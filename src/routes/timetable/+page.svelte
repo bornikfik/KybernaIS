@@ -157,20 +157,20 @@
             class="grid grid-cols-11 grid-rows-8 overflow-hidden rounded-lg shadow-lg bg-background text-sm"
         >
             <div
-                class="border p-2 flex items-center justify-center text-center bg-muted text-muted-foreground font-semibold"
+                class="border-r border-b border-r-background border-b-background p-2 flex items-center justify-center text-center bg-muted text-muted-foreground font-semibold"
             >
                 Čas
             </div>
             {#each days as day}
                 <div
-                    class="border p-2 text-center col-span-2 bg-muted text-muted-foreground font-semibold flex items-center justify-center"
+                    class="border-x border-x-background p-2 text-center col-span-2 bg-muted text-muted-foreground font-semibold flex items-center justify-center"
                 >
                     {day}
                 </div>
             {/each}
             {#each timeSlots as tslot}
                 <div
-                    class="border p-1 text-center bg-muted text-muted-foreground font-medium whitespace-nowrap overflow-hidden text-ellipsis"
+                    class="border-y border-y-background p-1 text-center bg-muted text-muted-foreground font-medium whitespace-nowrap overflow-hidden text-ellipsis flex items-center justify-center"
                 >
                     {tslot.split(' ')[1]}
                 </div>
