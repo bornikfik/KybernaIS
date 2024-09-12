@@ -85,7 +85,7 @@
         },
     };
 
-    let isCurrentTimetable = false;
+    let isCurrentTimetable = true;
     let selectedDate = new Date().toISOString().split('T')[0];
 
     function toggleTimetable() {
@@ -181,7 +181,7 @@
                                 href={displayedTimetable[day][tslot].meetLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="block bg-accent text-accent-foreground rounded p-1 shadow-sm transition-all hover:bg-accent-foreground hover:text-accent cursor-pointer h-full flex flex-col justify-between"
+                                class="bg-accent text-accent-foreground rounded p-1 shadow-sm transition-all hover:bg-accent-foreground hover:text-accent cursor-pointer h-full flex flex-col justify-between"
                             >
                                 <p
                                     class="text-base font-semibold whitespace-nowrap overflow-hidden text-ellipsis"
