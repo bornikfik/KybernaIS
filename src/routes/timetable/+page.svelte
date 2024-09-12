@@ -110,83 +110,102 @@
 </svelte:head>
 
 <div
-    class="w-full max-w-4xl mx-auto p-4 bg-background min-h-screen font-poppins"
+    class="w-full max-w-6xl mx-auto p-6 bg-background min-h-screen font-poppins flex flex-col justify-center"
 >
-    <h1 class="text-3xl font-bold text-center mb-6 text-primary">
-        Školní Rozvrh
-    </h1>
+    <div>
+        <h1 class="text-4xl font-bold text-center mb-8 text-primary">
+            Školní Rozvrh
+        </h1>
 
-    <div class="flex justify-between items-center mb-4">
-        <div class="flex items-center space-x-2">
-            <Switch
-                id="timetable-switch"
-                checked={isCurrentTimetable}
-                onCheckedChange={toggleTimetable}
-            />
-            <Label for="timetable-switch">
-                {isCurrentTimetable ? 'Aktuální rozvrh' : 'Stálý rozvrh'}
-            </Label>
-        </div>
-        <div class="flex items-center space-x-2">
-            <div class:opacity-50={!isCurrentTimetable}>
-                <Label for="date-input">Datum:</Label>
-            </div>
-            <div class:opacity-50={!isCurrentTimetable}>
-                <Input
-                    type="date"
-                    id="date-input"
-                    bind:value={selectedDate}
-                    disabled={!isCurrentTimetable}
-                />
-            </div>
-        </div>
-    </div>
-
-    <div
-        class="grid grid-cols-11 grid-rows-8 overflow-hidden rounded-lg shadow-md bg-background text-sm"
-    >
         <div
-            class="border p-2 flex items-center justify-center text-center bg-muted text-muted-foreground font-semibold"
+            class="flex justify-between items-center mb-8 bg-secondary rounded-lg p-5 shadow-md"
         >
-            Čas
-        </div>
-        {#each days as day}
-            <div
-                class="border p-2 text-center col-span-2 bg-muted text-muted-foreground font-semibold flex items-center justify-center"
-            >
-                {day}
+            <div class="flex items-center space-x-5">
+                <Switch
+                    id="timetable-switch"
+                    checked={isCurrentTimetable}
+                    onCheckedChange={toggleTimetable}
+                />
+                <div class="text-base font-medium">
+                    <Label for="timetable-switch">
+                        {isCurrentTimetable ? 'Aktuální rozvrh' : (
+                            'Stálý rozvrh'
+                        )}
+                    </Label>
+                </div>
             </div>
-        {/each}
-        {#each timeSlots as tslot}
+            <div class="flex items-center space-x-5">
+                <div
+                    class="text-base font-medium"
+                    class:opacity-50={!isCurrentTimetable}
+                >
+                    <Label for="date-input">Datum:</Label>
+                </div>
+                <div class:opacity-50={!isCurrentTimetable}>
+                    <Input
+                        type="date"
+                        id="date-input"
+                        bind:value={selectedDate}
+                        disabled={!isCurrentTimetable}
+                        class="w-48"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="grid grid-cols-11 grid-rows-8 overflow-hidden rounded-lg shadow-lg bg-background text-sm"
+        >
             <div
-                class="border p-2 text-center bg-muted text-muted-foreground font-medium"
+                class="border p-2 flex items-center justify-center text-center bg-muted text-muted-foreground font-semibold"
             >
-                {tslot}
+                Čas
             </div>
             {#each days as day}
-                <div class="border p-1 text-center col-span-2">
-                    {#if displayedTimetable[day]?.[tslot]}
-                        <a
-                            href={displayedTimetable[day][tslot].meetLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="block bg-accent rounded-lg p-2 shadow-sm transition-all hover:shadow-md hover:bg-accent-foreground hover:text-accent cursor-pointer"
-                        >
-                            <p
-                                class="text-lg font-semibold text-accent-foreground"
-                            >
-                                {displayedTimetable[day][tslot].subject}
-                            </p>
-                            <p class="text-xs">
-                                {displayedTimetable[day][tslot].classroom}
-                            </p>
-                            <p class="text-xs">
-                                {displayedTimetable[day][tslot].teacher}
-                            </p>
-                        </a>
-                    {/if}
+                <div
+                    class="border p-2 text-center col-span-2 bg-muted text-muted-foreground font-semibold flex items-center justify-center"
+                >
+                    {day}
                 </div>
             {/each}
-        {/each}
+            {#each timeSlots as tslot}
+                <div
+                    class="border p-1 text-center bg-muted text-muted-foreground font-medium whitespace-nowrap overflow-hidden text-ellipsis"
+                >
+                    {tslot.split(' ')[1]}
+                </div>
+                {#each days as day}
+                    <div class="border p-1 text-center col-span-2">
+                        {#if displayedTimetable[day]?.[tslot]}
+                            <a
+                                href={displayedTimetable[day][tslot].meetLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="block bg-accent text-accent-foreground rounded p-1 shadow-sm transition-all hover:bg-accent-foreground hover:text-accent cursor-pointer h-full flex flex-col justify-between"
+                            >
+                                <p
+                                    class="text-base font-semibold whitespace-nowrap overflow-hidden text-ellipsis"
+                                >
+                                    {displayedTimetable[day][tslot].subject}
+                                </p>
+                                <div>
+                                    <p
+                                        class="text-xs whitespace-nowrap overflow-hidden text-ellipsis"
+                                    >
+                                        {displayedTimetable[day][tslot]
+                                            .classroom}
+                                    </p>
+                                    <p
+                                        class="text-xs whitespace-nowrap overflow-hidden text-ellipsis"
+                                    >
+                                        {displayedTimetable[day][tslot].teacher}
+                                    </p>
+                                </div>
+                            </a>
+                        {/if}
+                    </div>
+                {/each}
+            {/each}
+        </div>
     </div>
 </div>

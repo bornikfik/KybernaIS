@@ -4,10 +4,6 @@
     import '../app.css';
 </script>
 
+<Sidebar />
 <ModeWatcher />
-<div class="flex">
-    <Sidebar />
-    <main class="flex-1 ml-64 min-w-[calc(100vw-16rem)]">
-        <slot />
-    </main>
-</div>
+<slot></slot>

@@ -18,14 +18,17 @@
     }
 </script>
 
-<div class="bg-muted/40 hidden border-r md:block">
-    <div class="flex flex-col gap-2 max-h-screen h-full">
+<div
+    class="bg-muted/40 hidden border-r md:block overflow-hidden fixed left-0 top-0 h-full w-64"
+>
+    <div class="flex flex-col h-full">
         <div class="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <a
                 href="/"
                 class="hover:text-muted-foreground transition-colors text-[15px] flex items-center font-semibold"
-                ><span>Kyberna Informační Systém</span></a
             >
+                <span>Kyberna Informační Systém</span>
+            </a>
             <Button
                 variant="outline"
                 size="icon"
@@ -42,11 +45,10 @@
                         <Icon icon="mdi:bell-off-outline" />
                     </div>
                 {/if}
-
                 <span class="sr-only">Toggle Notifications</span>
             </Button>
         </div>
-        <div class="flex-1">
+        <div class="flex-1 overflow-y-auto">
             <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
                 <a
                     href="timetable"
