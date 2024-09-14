@@ -3,6 +3,7 @@
     import { Input } from '$lib/components/ui/input';
     import { Label } from '$lib/components/ui/label';
     import { Switch } from '$lib/components/ui/switch';
+    import { onMount } from 'svelte';
 
     const days = ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek'] as const;
     const timeSlots = [
@@ -95,19 +96,32 @@
     $: displayedTimetable =
         isCurrentTimetable ? getCurrentTimetable(selectedDate) : timetableData;
 
-    function getCurrentTimetable(date: string) {
-        // Zde by byla logika pro získání aktuálního rozvrhu podle data
-        // Pro tento příklad vrátíme stejný rozvrh
-        return timetableData;
+    let ct: {};
+    onMount(async () => {
+        let res = await fetch(
+            'https://sis.ssakhk.cz/api/v1/getTimeTableByUserId',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json',
+                    'User-Agent': 'insomnia/9.3.3',
+                },
+                body: JSON.stringify({
+                    userid: 12000,
+                    dateTime: selectedDate,
+                }),
+            }
+        );
+
+        ct = await res.json();
+    });
+
+    async function getCurrentTimetable(date: string) {
+        return ct;
     }
 </script>
 
-<svelte:head>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-        rel="stylesheet"
-    />
-</svelte:head>
+<!-- <button aria-label="Refresh">Refresh table</button> -->
 
 <div
     class="w-full max-w-6xl mx-auto p-6 bg-background min-h-screen font-poppins flex flex-col justify-center"

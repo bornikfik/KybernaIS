@@ -18,14 +18,14 @@
     }
 </script>
 
-<div
+<aside
     class="bg-muted/40 hidden border-r md:block overflow-hidden fixed left-0 top-0 h-full w-64"
 >
     <div class="flex flex-col h-full">
         <div class="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <a
                 href="/"
-                class="hover:text-muted-foreground transition-colors text-[15px] flex items-center font-semibold"
+                class="hover:text-muted-foreground transition-colors text-[11px] flex items-center font-semibold"
             >
                 <span>Kyberna Informační Systém</span>
             </a>
@@ -49,112 +49,113 @@
             </Button>
         </div>
         <div class="flex-1 overflow-y-auto">
-            <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
+            <nav class="grid items-start px-2 text-lg font-medium lg:px-4">
                 <a
                     href="timetable"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
                 >
                     <Icon
                         icon="solar:calendar-bold"
-                        class="w-6 h-6"
+                        class="w-5 h-5"
                     />
                     Rozvrh
                 </a>
                 <a
                     href="attendance"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
                 >
                     <Icon
                         icon="mdi:user-clock-outline"
-                        class="w-6 h-6"
+                        class="w-5 h-5"
                     />
                     Docházka
                 </a>
                 <a
                     href="classification"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
                 >
                     <Icon
                         icon="mdi:report-line-variant"
-                        class="w-6 h-6"
+                        class="w-5 h-5"
                     />
                     Klasifikace
                 </a>
                 <a
                     href="work"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
                 >
                     <Icon
                         icon="mdi:work-outline"
-                        class="w-6 h-6"
+                        class="w-5 h-5"
                     />
                     Práce
                 </a>
                 <a
                     href="finance"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
                 >
                     <Icon
                         icon="mdi:attach-money"
-                        class="w-6 h-6"
+                        class="w-5 h-5"
                     />
                     Finance
                 </a>
             </nav>
         </div>
-        <nav class="grid items-start px-2 text-sm font-medium lg:px-4 pb-4">
-            <div>
-                <a
-                    href="tests"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-                >
-                    <Icon
-                        icon="ph:exam"
-                        class="w-6 h-6"
-                    />
-                    Zkoušky
-                </a>
-                <a
-                    href="documents"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-                >
-                    <Icon
-                        icon="mdi:file-document-outline"
-                        class="w-6 h-6"
-                    />
-                    Dokumenty
-                </a>
-                <a
-                    href="links"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-                >
-                    <Icon
-                        icon="material-symbols:link"
-                        class="w-6 h-6"
-                    />
-                    Odkazy
-                </a>
-                <a
-                    href="votes"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-                >
-                    <Icon
-                        icon="mdi:vote-outline"
-                        class="w-6 h-6"
-                    />
-                    Volby
-                </a>
-                <a
-                    href="logout"
-                    class="text-lg flex items-center gap-3 rounded-lg px-3 text-muted-foreground transition-colors hover:text-primary"
-                >
-                    <Icon
-                        icon="material-symbols:logout"
-                        class="w-6 h-6"
-                    />
-                    Odhlásit se
-                </a>
-            </div>
-        </nav>
+        <div class="p-2 lg:p-4">
+            <a
+                href="tests"
+                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+                <Icon
+                    icon="ph:exam"
+                    class="w-6 h-6"
+                />
+                Zkoušky
+            </a>
+            <a
+                href="documents"
+                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+                <Icon
+                    icon="mdi:file-document-outline"
+                    class="w-6 h-6"
+                />
+                Dokumenty
+            </a>
+            <a
+                href="links"
+                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+                <Icon
+                    icon="material-symbols:link"
+                    class="w-6 h-6"
+                />
+                Odkazy
+            </a>
+            <a
+                href="votes"
+                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+                <Icon
+                    icon="mdi:vote-outline"
+                    class="w-6 h-6"
+                />
+                Volby
+            </a>
+            <a
+                href="logout"
+                class="text-lg flex items-center gap-3 rounded-lg px-3 text-muted-foreground transition-colors hover:text-primary"
+            >
+                <Icon
+                    icon="material-symbols:logout"
+                    class="w-6 h-6"
+                />
+                Odhlásit se
+            </a>
+        </div>
     </div>
-</div>
+</aside>
+
+<style>
+</style>
