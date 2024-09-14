@@ -16,6 +16,8 @@
         </Button>
     </Sheet.Trigger>
     <Sheet.Content
+        inTransitionConfig={{ duration: 100, ease: 'ease-out', x: -100 }}
+        outTransitionConfig={{ duration: 100, ease: 'ease-out', x: -100 }}
         side="left"
         class="flex flex-col"
     >

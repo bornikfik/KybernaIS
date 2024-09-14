@@ -100,58 +100,55 @@
                     />
                     Finance
                 </a>
+                <a
+                    href="tests"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                >
+                    <Icon
+                        icon="mdi:file-document-outline"
+                        class="w-5 h-5"
+                    />
+                    Dokumenty
+                </a>
+                <a
+                    href="tests"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                >
+                    <Icon
+                        icon="material-symbols:link"
+                        class="w-5 h-5"
+                    />
+                    Odkazy
+                </a>
+                <a
+                    href="tests"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                >
+                    <Icon
+                        icon="mdi:vote-outline"
+                        class="w-5 h-5"
+                    />
+                    Volby
+                </a>
+                <a
+                    href="tests"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                >
+                    <Icon
+                        icon="ph:exam"
+                        class="w-5 h-5"
+                    />
+                    Zkoušky
+                </a>
             </nav>
         </div>
         <div class="p-2 lg:p-4">
             <a
-                href="tests"
-                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-            >
-                <Icon
-                    icon="ph:exam"
-                    class="w-6 h-6"
-                />
-                Zkoušky
-            </a>
-            <a
-                href="documents"
-                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-            >
-                <Icon
-                    icon="mdi:file-document-outline"
-                    class="w-6 h-6"
-                />
-                Dokumenty
-            </a>
-            <a
-                href="links"
-                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-            >
-                <Icon
-                    icon="material-symbols:link"
-                    class="w-6 h-6"
-                />
-                Odkazy
-            </a>
-            <a
-                href="votes"
-                class="text-lg flex items-center gap-3 rounded-lg px-3 pb-2 text-muted-foreground transition-colors hover:text-primary"
-            >
-                <Icon
-                    icon="mdi:vote-outline"
-                    class="w-6 h-6"
-                />
-                Volby
-            </a>
-            <a
-                href="logout"
+                href="profile"
                 class="text-lg flex items-center gap-3 rounded-lg px-3 text-muted-foreground transition-colors hover:text-primary"
             >
-                <Icon
-                    icon="material-symbols:logout"
-                    class="w-6 h-6"
-                />
-                Odhlásit se
+                <div class="rounded-full bg-white w-5 h-5"></div>
+                Profil
             </a>
         </div>
     </div>

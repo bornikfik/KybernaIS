@@ -88,9 +88,16 @@
 
     let isCurrentTimetable = true;
     let selectedDate = new Date().toISOString().split('T')[0];
+    let isToggleCooldown = false;
 
     function toggleTimetable() {
-        isCurrentTimetable = !isCurrentTimetable;
+        if (!isToggleCooldown) {
+            isToggleCooldown = true;
+            setTimeout(() => {
+                isCurrentTimetable = !isCurrentTimetable;
+                isToggleCooldown = false;
+            }, 150);
+        }
     }
 
     $: displayedTimetable =
@@ -139,6 +146,7 @@
                     id="timetable-switch"
                     checked={isCurrentTimetable}
                     onCheckedChange={toggleTimetable}
+                    disabled={isToggleCooldown}
                 />
                 <div class="text-base font-medium">
                     <Label for="timetable-switch">
@@ -189,7 +197,7 @@
                     {tslot.split(' ')[1]}
                 </div>
                 {#each days as day}
-                    <div class="border p-1 text-center col-span-2">
+                    <div class="border p-1 text-center col-span-2 h-[74px]">
                         {#if displayedTimetable[day]?.[tslot]}
                             <a
                                 href={displayedTimetable[day][tslot].meetLink}
