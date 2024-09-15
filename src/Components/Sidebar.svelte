@@ -25,7 +25,7 @@
         <div class="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <a
                 href="/"
-                class="hover:text-muted-foreground transition-colors text-[11px] flex items-center font-semibold"
+                class="hover:text-primary transition-colors text-[13px] flex items-center font-semibold"
             >
                 <span>Kyberna Informační Systém</span>
             </a>
@@ -52,7 +52,7 @@
             <nav class="grid items-start px-2 text-lg font-medium lg:px-4">
                 <a
                     href="timetable"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="solar:calendar-bold"
@@ -62,7 +62,7 @@
                 </a>
                 <a
                     href="attendance"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="mdi:user-clock-outline"
@@ -72,7 +72,7 @@
                 </a>
                 <a
                     href="classification"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="mdi:report-line-variant"
@@ -82,7 +82,7 @@
                 </a>
                 <a
                     href="work"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="mdi:work-outline"
@@ -92,7 +92,7 @@
                 </a>
                 <a
                     href="finance"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="mdi:attach-money"
@@ -102,7 +102,7 @@
                 </a>
                 <a
                     href="tests"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="mdi:file-document-outline"
@@ -112,7 +112,7 @@
                 </a>
                 <a
                     href="tests"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="material-symbols:link"
@@ -122,7 +122,7 @@
                 </a>
                 <a
                     href="tests"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="mdi:vote-outline"
@@ -132,7 +132,7 @@
                 </a>
                 <a
                     href="tests"
-                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-colors hover:text-primary"
+                    class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
                 >
                     <Icon
                         icon="ph:exam"
@@ -145,9 +145,9 @@
         <div class="p-2 lg:p-4">
             <a
                 href="profile"
-                class="text-lg flex items-center gap-3 rounded-lg px-3 text-muted-foreground transition-colors hover:text-primary"
+                class="font-medium text-lg flex items-center gap-3 rounded-lg px-3 text-muted-foreground transition-all duration-200 hover:text-primary hover:scale-105"
             >
-                <div class="rounded-full bg-white w-5 h-5"></div>
+                <div class="rounded-full bg-[#fa334b] w-7 h-7"></div>
                 Profil
             </a>
         </div>
